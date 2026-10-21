@@ -1,0 +1,6 @@
+{
+  "name": "EventEase AI — Plan Smarter. Celebrate Better",
+  "description": "GenAI-powered event planning platform to organize weddings, birthdays, anniversaries, and community celebrations with personalized ideas, intelligent budgets, interactive timelines, and vendor checklists.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

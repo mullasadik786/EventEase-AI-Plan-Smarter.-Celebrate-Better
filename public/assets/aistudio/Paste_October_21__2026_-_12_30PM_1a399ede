@@ -1,0 +1,1089 @@
+🎉 EventEase AI — Complete World-Class App Creation Prompt
+
+Your app concept is EventEase AI — Plan Smarter. Celebrate Better. 🎊
+
+It is a GenAI-powered event planning platform that helps people organize weddings, birthdays, anniversaries, and community events with personalized ideas, intelligent budgets, schedules, vendor checklists, and beautiful event designs.
+
+The generated image above is the visual concept for your app. Below is a complete master prompt you can copy into an AI coding tool such as Google AI Studio, Cursor, or Codex to build the application.
+
+🚀 Complete Master Prompt — Copy and Paste
+EventEase AI — Complete App Development Master Prompt
+PROJECT: EventEase AI — World-Class Intelligent Event Planning Platform
+1. YOUR ROLE
+
+Act as a principal full-stack engineer, AI architect, senior UI/UX designer, product strategist, security engineer, and QA automation specialist.
+
+Build a complete, polished, responsive, production-minded GenAI-powered event planning application named EventEase AI.
+
+Do not merely produce a landing page, mockup, prototype, or implementation plan. Implement the actual application, make every visible interaction functional, run the available checks, fix errors, and prepare the project for deployment.
+
+Work directly in the existing project directory. Inspect existing files first, preserve working features, and improve the application without unnecessarily replacing functional code.
+
+If starting from an empty directory, initialize the entire application.
+
+2. PRODUCT VISION
+
+EventEase AI is an intelligent event planning assistant that enables anyone to plan memorable events without feeling overwhelmed by budgets, vendors, schedules, or creative decisions.
+
+Tagline:
+
+"Plan Smarter. Celebrate Better."
+
+The application should feel like a premium combination of a professional event planner, a personal AI assistant, a budget management tool, and a visual event inspiration platform.
+
+Target audiences:
+
+Couples planning weddings and engagements.
+Families organizing birthdays and anniversaries.
+Friends planning celebrations and parties.
+Communities organizing festivals and social gatherings.
+Schools and colleges organizing cultural events.
+Nonprofits planning fundraisers and community activities.
+Small businesses organizing corporate events.
+
+Prioritize simplicity, beautiful visuals, practical recommendations, transparent costs, and trustworthy AI-generated plans.
+
+3. REQUIRED TECHNOLOGY STACK
+
+Use the following technologies where compatible with the existing project:
+
+Frontend:
+
+Next.js App Router.
+React.
+TypeScript with strict mode.
+Tailwind CSS.
+shadcn/ui and accessible component primitives.
+Lucide icons.
+Recharts for budget and event analytics.
+React Hook Form and Zod for forms and validation.
+Framer Motion or an equivalent lightweight animation library.
+
+Backend:
+
+Next.js server-side route handlers.
+A clean service and repository architecture.
+Server-side AI provider integration.
+Structured JSON responses validated with schemas.
+
+AI:
+
+Use the currently supported Google Gemini API or another configured LLM provider.
+Keep AI provider calls on the server.
+Use environment variables for API configuration.
+Never hardcode or expose secret keys.
+Provide deterministic demo responses when no API key is configured.
+
+Persistence:
+
+Start with a reliable local demo mode using seeded fixtures and browser storage where appropriate.
+Abstract persistence behind a repository interface.
+Support an optional database integration for persistent, multi-user deployment.
+If Firebase is configured, use Firebase Authentication and Firestore with strict per-user access controls.
+Never represent local browser storage as secure server-side persistence.
+
+Deployment:
+
+Prepare the application for Vercel deployment.
+Include environment variable documentation.
+Include a complete README.
+Provide a working demonstration without requiring a paid AI key.
+
+Do not add unnecessary dependencies or introduce infrastructure that the application does not need.
+
+4. VISUAL DESIGN SYSTEM
+
+Create a stunning, modern, colorful, premium interface.
+
+Design inspiration:
+
+Luxury wedding magazines.
+Pinterest-style inspiration boards.
+Modern SaaS dashboards.
+Elegant invitation designs.
+High-end hospitality applications.
+Friendly AI assistants.
+
+Color palette:
+
+Primary indigo: #5B5CF0.
+Deep navy: #14213D.
+Soft lavender: #EEEAFE.
+Warm cream: #FFF9F0.
+Coral pink: #FF7799.
+Peach: #FFE0CB.
+Mint green: #CFF5E8.
+Gold accents: #F5BD55.
+White cards with subtle shadows.
+
+Use CSS variables for design tokens and maintain consistent colors throughout the application.
+
+Design requirements:
+
+Responsive mobile-first layouts.
+Premium typography.
+Rounded cards with restrained shadows.
+Beautiful gradients.
+High-quality event photographs.
+Elegant empty states.
+Clear visual hierarchy.
+Subtle page transitions.
+Animated progress indicators.
+Skeleton loaders during AI generation.
+Toast notifications.
+Helpful tooltips.
+Light mode and dark mode.
+Accessible contrast and keyboard navigation.
+
+Avoid excessive gradients, distracting animations, cluttered dashboards, and generic template aesthetics.
+
+Use real image URLs from a reliable image source or locally stored licensed assets. Verify image availability and provide elegant fallbacks when an image fails to load.
+
+Never fabricate photographs using broken image links.
+
+5. LANDING PAGE
+
+Create an attractive public landing page.
+
+Hero headline:
+
+"Your Perfect Event Starts Here."
+
+Supporting text:
+
+"From unforgettable weddings to joyful birthdays and meaningful community celebrations, let AI turn your ideas into beautifully organized events."
+
+Primary CTA:
+"Plan My Event"
+
+Secondary CTA:
+"Explore Demo"
+
+Hero visual:
+
+Elegant wedding venue.
+Beautiful birthday celebration.
+Community festival.
+Premium application dashboard preview.
+Friendly AI assistant illustration.
+
+Below the hero, include:
+
+A. Event categories:
+
+Weddings.
+Birthdays.
+Engagements.
+Anniversaries.
+Baby showers.
+Graduation parties.
+Community festivals.
+Fundraisers.
+Corporate events.
+
+B. How it works:
+
+Tell us about your event.
+Generate a personalized plan.
+Organize your budget and timeline.
+Manage vendors and tasks.
+Celebrate with confidence.
+
+C. Feature showcase:
+
+AI event planner.
+Intelligent budget calculator.
+Timeline generator.
+Vendor checklist.
+Personalized themes.
+Guest management.
+Event inspiration gallery.
+
+D. Sample event plans.
+
+E. Testimonials using clearly identified fictional demo data.
+
+F. Frequently asked questions.
+
+G. Final CTA.
+
+All buttons must navigate to real application functionality.
+
+6. APPLICATION DASHBOARD
+
+Build a professional dashboard with a responsive sidebar on desktop and a mobile navigation system.
+
+Navigation:
+
+Dashboard.
+My Events.
+AI Event Planner.
+Budget Manager.
+Timeline & Tasks.
+Guests.
+Vendors.
+Inspiration Gallery.
+Settings.
+
+Dashboard header:
+"Let's plan something unforgettable."
+
+Include:
+
+Upcoming events.
+Total planned budget.
+Total estimated expenses.
+Remaining budget.
+Completed tasks.
+Upcoming deadlines.
+Recent planning activity.
+AI-generated recommendations.
+
+Charts:
+
+Planned versus actual spending.
+Budget allocation by category.
+Task completion progress.
+Event countdown.
+
+Create functional event cards showing:
+
+Event title.
+Event type.
+Event date.
+Location.
+Budget.
+Completion percentage.
+Cover image.
+Quick actions.
+
+Provide realistic seeded demo data and a clear option to reset the demo.
+
+7. AI EVENT CREATOR
+
+This is the primary product feature.
+
+Create a beautiful multistep event creation wizard.
+
+Step 1: Event details.
+
+Event name.
+Event type.
+Event date.
+Start and end times.
+City and venue.
+Indoor or outdoor setting.
+Estimated guest count.
+Preferred language.
+
+Step 2: Budget and finances.
+
+Total budget.
+Currency.
+Preferred spending level.
+Budget flexibility.
+Expense priorities.
+Contingency reserve.
+
+Support INR as the default currency for the Indian demo, with optional USD and other configurable currencies.
+
+Step 3: Style and preferences.
+
+Event theme.
+Color palette.
+Cultural preferences.
+Traditional or contemporary style.
+Food preferences.
+Dietary restrictions.
+Accessibility requirements.
+Music and entertainment preferences.
+Sustainability preferences.
+
+Step 4: Planning preferences.
+
+DIY versus professional services.
+Preferred vendor types.
+Planning start date.
+Guest experience priorities.
+Special requirements.
+
+Step 5: Review and generate.
+
+Display a clear summary before generating the plan.
+
+Allow users to go backward, edit information, save drafts, and regenerate recommendations without losing previously entered details.
+
+8. GENERATIVE AI EVENT PLANNER
+
+Implement a conversational AI planning assistant.
+
+Example greeting:
+
+"Hi! I'm your EventEase AI planner. Tell me what you're celebrating, your budget, and the kind of experience you want to create."
+
+Example user request:
+
+"Plan a traditional wedding in Andhra Pradesh for 300 guests with a budget of ₹12 lakh. I want elegant decorations, vegetarian catering, photography, and a detailed six-month preparation schedule."
+
+The assistant should generate a structured event plan containing:
+
+Event overview.
+Recommended theme.
+Color palette.
+Decoration concepts.
+Budget allocation.
+Timeline.
+Vendor categories.
+Task checklist.
+Guest planning recommendations.
+Food and entertainment ideas.
+Risk and contingency considerations.
+Personalized suggestions.
+
+AI RESPONSE FORMAT:
+
+{
+"eventSummary": {
+"title": "Example Event",
+"eventType": "wedding",
+"theme": "Elegant Traditional",
+"guestCount": 300,
+"currency": "INR"
+},
+"budget": {
+"total": 1200000,
+"contingency": 100000,
+"categories": [
+{
+"name": "Venue",
+"estimatedCost": 150000,
+"priority": "high",
+"reason": "Suitable venue for the expected guest count"
+}
+]
+},
+"timeline": [
+{
+"title": "Book the venue",
+"dueDate": "2027-01-15",
+"priority": "high",
+"status": "pending"
+}
+],
+"vendorChecklist": [
+{
+"category": "Catering",
+"status": "not_started",
+"requirements": ["Vegetarian menu", "Guest capacity"]
+}
+],
+"creativeIdeas": [
+{
+"title": "Floral entrance",
+"description": "Create a welcoming entrance using seasonal flowers.",
+"estimatedCost": 15000
+}
+],
+"riskChecklist": [],
+"assumptions": [],
+"nextActions": []
+}
+
+Treat this as an illustrative schema, not a requirement to use the sample values for every event.
+
+Validate all generated output using a strict schema. Handle missing fields, invalid dates, malformed JSON, timeouts, and provider errors gracefully.
+
+Do not claim that an estimate is a verified vendor quote.
+
+AI-generated plans must be editable by the user.
+
+Provide actions:
+
+Generate plan.
+Regenerate section.
+Improve this idea.
+Reduce costs.
+Suggest premium alternatives.
+Save changes.
+Export plan.
+Ask a follow-up question.
+9. SMART BUDGET PLANNER
+
+Build a fully functional budget management module.
+
+Budget categories:
+
+Venue.
+Catering.
+Decoration.
+Photography.
+Videography.
+Clothing.
+Invitations.
+Entertainment.
+Transportation.
+Accommodation.
+Gifts.
+Permits.
+Miscellaneous.
+Emergency reserve.
+
+Features:
+
+Set an overall budget.
+Generate suggested allocations.
+Add, edit, and delete expenses.
+Track estimated versus actual costs.
+Record payments and outstanding balances.
+Calculate remaining budget.
+Display category-level progress.
+Flag budget overruns.
+Suggest potential savings.
+Recalculate totals immediately after changes.
+
+Formula:
+
+Remaining Budget = Total Budget - Total Actual Expenses.
+
+For planning:
+
+Available Planning Budget = Total Budget - Reserved Contingency.
+
+Make the contingency amount configurable and prevent double-counting it in displayed totals.
+
+Use deterministic calculations for all financial totals. Never rely on the LLM to perform authoritative arithmetic.
+
+Provide an interactive pie chart and category breakdown.
+
+Allow users to export budget reports to CSV and print-friendly PDF.
+
+10. TIMELINE AND TASK MANAGEMENT
+
+Create an interactive planning timeline.
+
+Features:
+
+Tasks with due dates.
+Priority levels.
+Task owners.
+Completion status.
+Dependencies.
+Reminders.
+Notes.
+Search and filters.
+Calendar view.
+List view.
+Progress tracking.
+
+Suggested wedding milestones:
+
+Define the budget.
+Prepare the guest list.
+Research venues.
+Book the venue.
+Shortlist caterers.
+Select photography services.
+Finalize decorations.
+Send invitations.
+Confirm guest attendance.
+Review vendor arrangements.
+Prepare the final event-day schedule.
+
+Adapt the timeline to the actual event date and type.
+
+Generate reminders based on task deadlines. Do not claim notifications were sent unless a real notification provider is configured.
+
+Prevent impossible dates and clearly flag overdue tasks.
+
+11. VENDOR MANAGEMENT
+
+Create a dedicated vendor discovery and management experience.
+
+Vendor categories:
+
+Venues.
+Caterers.
+Decorators.
+Photographers.
+Videographers.
+Florists.
+Makeup artists.
+DJs and musicians.
+Bakers.
+Transportation.
+Event coordinators.
+
+Vendor cards should include:
+
+Business name.
+Category.
+Location.
+Service description.
+Price range.
+User-entered rating or verified rating source.
+Availability status, when genuinely available.
+Contact information, when supplied or verified.
+Notes.
+Comparison controls.
+Booking status.
+
+Allow users to:
+
+Add vendors manually.
+Save favorites.
+Compare vendor offers.
+Track quotes.
+Record deposits.
+Track contracts and outstanding payments.
+Add meeting notes.
+Mark vendors as shortlisted, contacted, booked, or declined.
+
+IMPORTANT:
+
+If no real vendor integration exists, display clearly labeled sample vendors.
+
+Do not invent real business contact details, ratings, availability, customer reviews, or verified booking statuses.
+
+Do not claim a vendor has been contacted or booked unless the corresponding action actually occurred.
+
+Architect the vendor module so that a verified vendor API or search integration can be added later.
+
+12. GUEST MANAGEMENT
+
+Create a practical guest management module.
+
+Features:
+
+Add and edit guests.
+Import guests from CSV.
+Export guest lists.
+RSVP tracking.
+Plus-one management.
+Meal preferences.
+Dietary requirements.
+Table assignment notes.
+Contact notes.
+Guest count summaries.
+
+RSVP statuses:
+
+Invited.
+Confirmed.
+Declined.
+Pending.
+
+Display:
+
+Total guests.
+Confirmed guests.
+Pending responses.
+Declined invitations.
+Estimated catering requirements.
+
+Validate uploaded files and do not expose private guest information.
+
+13. VISUAL INSPIRATION GALLERY
+
+Build a beautiful image-first inspiration gallery.
+
+Collections:
+
+Luxury weddings.
+Traditional Indian weddings.
+Minimalist weddings.
+Floral decorations.
+Birthday themes.
+Garden parties.
+Cultural celebrations.
+Community festivals.
+Sustainable events.
+Elegant table settings.
+Invitations and color palettes.
+
+Each inspiration card should show:
+
+Image.
+Theme name.
+Short description.
+Suggested color palette.
+Approximate budget tier.
+Save-to-favorites action.
+Generate a similar idea action.
+
+Use valid, appropriately licensed image sources or local assets.
+
+Implement category filters, search, responsive image grids, loading states, and graceful image fallbacks.
+
+When a user selects an inspiration item, allow them to apply its theme to an existing event or use it to create a new event.
+
+AI may generate text descriptions and image prompts. If an image generation provider is configured, allow users to generate original concept images through a secure server-side integration.
+
+Do not pretend that a text description is an actual generated photograph.
+
+14. PERSONALIZED EVENT IDEAS
+
+Generate suggestions based on:
+
+Event type.
+Budget.
+Guest count.
+Location.
+Season.
+Cultural preferences.
+Accessibility needs.
+Sustainability goals.
+User-selected themes.
+
+Examples:
+
+Low-cost decoration alternatives.
+Unique birthday experiences.
+Traditional wedding decoration ideas.
+Community engagement activities.
+Personalized invitation wording.
+Menu suggestions.
+Photo booth concepts.
+Sustainable event favors.
+Rain contingency plans.
+
+Every recommendation should explain why it suits the user's preferences.
+
+Show approximate costs only when a reasonable estimate can be provided, and label estimates clearly.
+
+Never present unsupported prices as current market quotes.
+
+15. EVENT-DAY COMMAND CENTER
+
+Create an event-day dashboard containing:
+
+Event schedule.
+Vendor contact list.
+Important tasks.
+Setup checklist.
+Guest coordination notes.
+Payment reminders.
+Emergency contact details.
+Backup arrangements.
+Critical deadlines.
+
+Provide a print-friendly run sheet for event organizers.
+
+Support offline-friendly access to previously saved, non-sensitive event schedules where practical.
+
+Make critical event information easy to read on a mobile device.
+
+16. DEMO MODE
+
+The application must work without an API key or account.
+
+Implement a deterministic demonstration mode with realistic sample events.
+
+Include:
+
+A sample wedding.
+A sample birthday party.
+A sample community festival.
+Sample budget allocations.
+Example timeline tasks.
+Sample vendor records clearly labeled as fictional.
+Example guest lists using fictional identities.
+Example AI conversations.
+
+The demo should allow users to create, edit, and delete sample events.
+
+Persist demo changes in browser storage where appropriate.
+
+Show a visible demo-mode indicator so users understand that the data is illustrative.
+
+Do not require users to enter a credit card or configure an API key to explore the core product.
+
+17. OPTIONAL AUTHENTICATION AND DATABASE
+
+Provide a clean architecture for optional authenticated deployment.
+
+If Firebase is configured:
+
+Implement Google Sign-In.
+Associate all private records with an authenticated user ID.
+Enforce per-user access restrictions through Firestore Security Rules.
+Verify identity on server-side operations.
+Validate ownership for every event, expense, guest, task, and vendor record.
+Prevent insecure direct object references.
+Never trust a client-provided user ID.
+Protect private data against cross-user access.
+
+Implement account-level data export and deletion where authentication and persistent storage are enabled.
+
+If authentication is not configured, use the explicitly labeled demo mode instead of simulating secure authentication.
+
+18. SECURITY AND PRIVACY
+
+Apply secure development practices throughout.
+
+Requirements:
+
+Never expose AI API keys in client-side code.
+Validate and sanitize user input.
+Validate AI-generated JSON.
+Apply request size limits.
+Add appropriate rate limiting to AI endpoints.
+Handle errors without exposing secrets or stack traces.
+Restrict CORS where applicable.
+Avoid unsafe HTML rendering.
+Protect private data.
+Use authorization checks on every protected server operation.
+Validate file uploads by size, type, and content where practical.
+Prevent unauthorized file access.
+Avoid logging sensitive personal information.
+Keep dependencies updated and document security-sensitive configuration.
+
+Treat user-provided event descriptions as untrusted input.
+
+Do not allow instructions embedded in event descriptions or imported files to override application rules, reveal secrets, or access another user's data.
+
+Do not send private guest details to an AI provider unless needed, disclosed, and explicitly supported by the configured data-processing policy.
+
+19. AI ENGINEERING
+
+Create a provider-independent AI service interface.
+
+Suggested architecture:
+
+AI provider adapter.
+Event planning service.
+Prompt templates.
+Output schema validation.
+Budget calculation service.
+Timeline generation service.
+Recommendation service.
+Error handling and retry policies.
+
+Requirements:
+
+Use structured output when supported.
+Validate model responses before saving.
+Limit retries and request duration.
+Handle provider rate limits.
+Display useful loading states.
+Prevent duplicate submissions.
+Cache safe, reusable suggestions when appropriate.
+Keep deterministic business logic outside the model.
+Clearly identify generated estimates and assumptions.
+
+Provide fallback responses for demo mode.
+
+Do not silently switch to fabricated AI output when a live provider fails. Inform the user when the application is using sample or fallback data.
+
+20. EXPORTS AND SHARING
+
+Implement:
+
+Export event plan as PDF.
+Export budget as CSV.
+Print the timeline.
+Export guest lists as CSV.
+Copy an event summary.
+Download a vendor checklist.
+Generate a shareable event brief.
+
+Sharing must be opt-in.
+
+Private event data must not become publicly accessible through guessable URLs.
+
+If public sharing is implemented, use explicit consent, unguessable identifiers, revocation controls, and clear warnings about which information becomes visible.
+
+21. ACCESSIBILITY AND RESPONSIVENESS
+
+Target WCAG 2.2 AA practices where applicable.
+
+Include:
+
+Semantic HTML.
+Keyboard navigation.
+Visible focus indicators.
+Screen-reader labels.
+Accessible dialogs.
+Form validation messages.
+Appropriate color contrast.
+Reduced-motion support.
+Accessible charts with text summaries.
+Responsive layouts for phones, tablets, laptops, and desktop screens.
+
+Test at narrow mobile widths as well as desktop sizes.
+
+22. TESTING
+
+Write and run meaningful automated tests.
+
+Unit tests:
+
+Budget calculations.
+Contingency calculations.
+Currency formatting.
+Event validation.
+Timeline date calculations.
+Task completion.
+Guest RSVP calculations.
+AI output validation.
+Error handling.
+
+Integration tests:
+
+Event creation and editing.
+Expense creation and deletion.
+Timeline generation.
+Vendor management.
+Demo persistence.
+API validation.
+Authentication and ownership checks when configured.
+
+End-to-end tests:
+
+Open the landing page.
+Enter demo mode.
+Create an event.
+Generate or load a sample plan.
+Update the budget.
+Add a planning task.
+Add a vendor.
+Add a guest.
+Save changes.
+Export an event plan.
+
+Also test:
+
+Empty states.
+Invalid form submissions.
+Network failures.
+AI provider failures.
+Missing API keys.
+Small screens.
+Keyboard-only navigation.
+
+Fix failing tests and build errors before considering the application complete.
+
+Never claim that tests passed unless they were actually run.
+
+23. PERFORMANCE
+
+Optimize for a smooth user experience.
+
+Implement:
+
+Route-level code splitting.
+Lazy-loaded heavy components.
+Optimized images.
+Minimal unnecessary dependencies.
+Efficient state updates.
+Appropriate caching.
+Loading skeletons.
+Pagination or virtualization where needed.
+
+Avoid loading large charts, AI libraries, or administrative modules before they are needed.
+
+Do not sacrifice accessibility or correctness for superficial performance gains.
+
+24. SUGGESTED PROJECT STRUCTURE
+
+Organize the application into reusable modules.
+
+app/
+page.tsx
+dashboard/
+page.tsx
+events/
+page.tsx
+new/
+page.tsx
+[eventId]/
+page.tsx
+planner/
+page.tsx
+budget/
+page.tsx
+timeline/
+page.tsx
+guests/
+page.tsx
+vendors/
+page.tsx
+inspiration/
+page.tsx
+api/
+ai/
+plan/
+route.ts
+
+components/
+layout/
+dashboard/
+events/
+planner/
+budget/
+timeline/
+guests/
+vendors/
+inspiration/
+ui/
+
+lib/
+ai/
+schemas/
+services/
+repositories/
+calculations/
+validation/
+security/
+exports/
+utils/
+
+tests/
+unit/
+integration/
+e2e/
+
+The exact structure may be adapted to the existing project, provided the architecture remains clear and maintainable.
+
+25. ENVIRONMENT CONFIGURATION
+
+Create an .env.example file containing placeholders only.
+
+Example:
+
+GEMINI_API_KEY=
+AI_MODEL=
+NEXT_PUBLIC_APP_NAME=EventEase AI
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+Optional Firebase configuration should be documented separately.
+
+Only variables genuinely required by the selected implementation should be included.
+
+Never put private API keys in NEXT_PUBLIC variables.
+
+Never commit real secrets.
+
+26. README AND DEPLOYMENT
+
+Create a comprehensive README that explains:
+
+Product overview.
+Features.
+Technology stack.
+Prerequisites.
+Local installation.
+Development commands.
+Demo mode.
+AI provider configuration.
+Optional database setup.
+Security configuration.
+Testing commands.
+Production build.
+Vercel deployment.
+Environment variables.
+Known limitations.
+
+Provide the exact commands appropriate for the generated project.
+
+Do not claim deployment is complete unless the deployment has actually succeeded.
+
+27. FINAL ACCEPTANCE CRITERIA
+
+The application is complete only when:
+
+The landing page looks premium and polished.
+All major navigation links work.
+Demo mode runs without an API key.
+Users can create and edit events.
+AI planning works when configured.
+AI failures are handled gracefully.
+Generated plans are editable.
+Budget calculations are accurate.
+Timeline and task management work.
+Vendor management works.
+Guest management works.
+The inspiration gallery works.
+Event data persists according to the selected storage mode.
+Exports produce usable files.
+The interface works on mobile and desktop.
+Accessibility has been checked.
+Security controls are implemented where applicable.
+Automated tests are written and executed.
+Production build succeeds.
+Documentation is complete.
+No major button is decorative or nonfunctional.
+No fake AI, vendor booking, notification, or deployment success is presented as a real action.
+28. IMPLEMENTATION WORKFLOW
+
+Follow this sequence:
+
+Phase 1: Inspect the repository and identify the current stack.
+
+Phase 2: Establish the application architecture, theme, navigation, and responsive design.
+
+Phase 3: Implement the landing page and dashboard with functional demo data.
+
+Phase 4: Implement event creation, editing, and planning.
+
+Phase 5: Implement the budget engine and timeline management.
+
+Phase 6: Implement vendor, guest, and inspiration modules.
+
+Phase 7: Integrate the AI provider through secure server-side endpoints.
+
+Phase 8: Implement exports, error states, persistence, and optional authentication.
+
+Phase 9: Add tests, verify accessibility, and fix responsive issues.
+
+Phase 10: Run linting, type checks, tests, and production build.
+
+Phase 11: Fix identified problems and update documentation.
+
+Prioritize a fully working end-to-end product over a large collection of incomplete features.
+
+Do not stop after creating a plan or generating a homepage.
+
+Start by inspecting the existing project, then implement the complete application directly.
+
+🎨 Recommended App Screens
+
+Use the generated EventEase AI image as your visual reference when building these screens.
+
+Screen	Main features	Visual style
+🏠 Home	Hero, event categories, AI introduction	Cream background, colorful event photography
+📊 Dashboard	Upcoming events, budgets, tasks	Modern cards and charts
+💍 AI Planner	Event wizard and personalized ideas	Interactive forms with colorful illustrations
+💰 Budget	Expenses, remaining budget, savings	Indigo charts and financial cards
+📅 Timeline	Deadlines, reminders, progress	Calendar and checklist
+🤝 Vendors	Vendor categories, comparisons, notes	Image-rich recommendation cards
+👥 Guests	Guest list and RSVP tracking	Clean tables and guest cards
+🖼️ Inspiration	Wedding, birthday, and festival themes	Pinterest-style image gallery
+✨ AI Assistant	Conversational event planning	Friendly assistant with generated recommendations
+🧠 How the AI Should Work
+
+For example, a user enters:
+
+Plan a traditional wedding in Andhra Pradesh for 300 guests with a budget of ₹12 lakh. Include catering, decorations, photography, and a six-month timeline.
+
+EventEase AI should then produce:
+
+Personalized concept: A traditional wedding with a coordinated color palette and decoration suggestions.
+Budget plan: Estimated spending across the venue, catering, photography, decorations, and other categories.
+Timeline: Tasks organized by deadlines leading up to the wedding.
+Vendor checklist: Services to research, compare, and book.
+Savings suggestions: Practical alternatives if the estimated spending exceeds the budget.
+Event-day schedule: A coordinated checklist for the organizers.
+
+All estimates should be clearly labeled, and actual financial calculations should be performed by application code rather than left to the AI model.
+
+🛠️ Recommended Development Approach
+
+To make the app impressive while keeping it practical:
+
+Build the complete visual interface first. Include the landing page, dashboard, and all primary screens.
+Make demo mode fully functional. Users should be able to explore the app without an API key.
+Implement the core planning engine. Event creation, budgets, tasks, and vendor checklists should work independently of the AI.
+Connect Gemini through a secure server-side API. Generate structured plans based on the user's requirements.
+Test and deploy. Run the checks, fix errors, and prepare the project for deployment on Vercel.
+
+My recommendation: Build EventEase AI as a polished, mobile-first web application with a working demo, personalized AI planning, accurate budget calculations, and visually rich event inspiration. That gives you both an attractive presentation and a useful application that people can actually try.
