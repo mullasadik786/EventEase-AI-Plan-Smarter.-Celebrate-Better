@@ -489,7 +489,7 @@ Return JSON array with items having keys: "title", "desc", "estimatedSavings".`;
 // Configure Vite middleware in dev or static files in production
 async function startServer() {
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'dist')));
+    app.use(express.static(path.join(__dirname, 'dist'), { maxAge: '1d', etag: true }));
     app.get('*', (req: Request, res: Response) => {
       res.sendFile(path.join(__dirname, 'dist', 'index.html'));
     });

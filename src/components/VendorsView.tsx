@@ -295,6 +295,8 @@ export const VendorsView: React.FC<VendorsViewProps> = ({
                     <img
                       src={vendor.image || 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80'}
                       alt={vendor.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover hover:scale-105 transition duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[10px] font-bold px-2.5 py-0.5 rounded-full text-slate-800 shadow-2xs">

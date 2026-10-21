@@ -238,6 +238,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                     <img
                       src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80"
                       alt="Celebration Venue"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -343,6 +345,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   <img
                     src={cat.img}
                     alt={cat.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                   <div className="absolute top-2.5 left-2.5 bg-white/90 backdrop-blur-xs text-base w-8 h-8 rounded-lg flex items-center justify-center shadow-xs" aria-hidden="true">
@@ -477,6 +481,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <img
                   src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80"
                   alt="Wedding Plan"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-md">
@@ -508,6 +514,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <img
                   src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80"
                   alt="Birthday Plan"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-md">
@@ -539,6 +547,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <img
                   src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"
                   alt="Community Festival Plan"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-md">

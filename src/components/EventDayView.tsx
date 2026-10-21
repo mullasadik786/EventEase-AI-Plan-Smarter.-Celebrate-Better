@@ -29,9 +29,9 @@ interface EventDayViewProps {
 
 export const EventDayView: React.FC<EventDayViewProps> = ({
   activeEvent,
-  scheduleItems,
-  vendors,
-  budgetItems,
+  scheduleItems = [],
+  vendors = [],
+  budgetItems = [],
   onToggleScheduleItem,
   onAddScheduleItem,
   onDeleteScheduleItem

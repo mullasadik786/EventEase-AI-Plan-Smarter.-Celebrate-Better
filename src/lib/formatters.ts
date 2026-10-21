@@ -43,24 +43,29 @@ export function getDaysRemaining(targetDateStr: string): number {
   }
 }
 
-export function exportToCSV(filename: string, rows: (string | number)[][]) {
-  const processRow = (row: (string | number)[]) => {
-    let finalVal = '';
-    for (let j = 0; j < row.length; j++) {
-      let innerValue = row[j] === null || row[j] === undefined ? '' : row[j].toString();
-      let result = innerValue.replace(/"/g, '""');
-      if (result.search(/("|,|\n)/g) >= 0) {
-        result = '"' + result + '"';
-      }
-      if (j > 0) finalVal += ',';
-      finalVal += result;
-    }
-    return finalVal + '\n';
-  };
+export function sanitizeCSVCell(val: string | number): string {
+  let str = val === null || val === undefined ? '' : String(val).trim();
+  // Protect against CSV / Excel Formula Injection (starts with =, +, -, @, tab, cr)
+  if (/^[=\+\-@\t\r]/.test(str)) {
+    str = "'" + str;
+  }
+  let result = str.replace(/"/g, '""');
+  if (result.search(/("|,|\n|\r)/g) >= 0) {
+    result = `"${result}"`;
+  }
+  return result;
+}
 
+export function exportToCSV(filename: string, rows: (string | number)[][]) {
   let csvFile = '';
   for (let i = 0; i < rows.length; i++) {
-    csvFile += processRow(rows[i]);
+    const row = rows[i];
+    let rowStr = '';
+    for (let j = 0; j < row.length; j++) {
+      if (j > 0) rowStr += ',';
+      rowStr += sanitizeCSVCell(row[j]);
+    }
+    csvFile += rowStr + '\n';
   }
 
   const blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
@@ -73,5 +78,6 @@ export function exportToCSV(filename: string, rows: (string | number)[][]) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   }
 }

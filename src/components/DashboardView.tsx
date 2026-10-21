@@ -427,6 +427,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     <img
                       src={evt.coverImage}
                       alt={evt.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                     />
                     <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-xs text-[10px] font-bold px-2 py-0.5 rounded-md text-slate-900">
