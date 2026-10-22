@@ -29,15 +29,40 @@ export const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<string>('landing');
 
   // Core Data State
-  const [events, setEvents] = useState<AppEvent[]>([]);
-  const [activeEventId, setActiveEventId] = useState<string>('');
-  const [budgetItems, setBudgetItems] = useState<BudgetItem[]>([]);
-  const [tasks, setTasks] = useState<TimelineTask[]>([]);
-  const [vendors, setVendors] = useState<Vendor[]>([]);
-  const [guests, setGuests] = useState<Guest[]>([]);
-  const [dayOfSchedule, setDayOfSchedule] = useState<DayOfScheduleItem[]>([]);
-  const [inspirations, setInspirations] = useState<InspirationItem[]>([]);
-  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+  const [events, setEvents] = useState<AppEvent[]>(() => {
+    StorageService.init();
+    return StorageService.getEvents();
+  });
+  const [activeEventId, setActiveEventId] = useState<string>(() => {
+    StorageService.init();
+    return StorageService.getActiveEventId();
+  });
+  const [budgetItems, setBudgetItems] = useState<BudgetItem[]>(() => {
+    const id = StorageService.getActiveEventId();
+    return StorageService.getBudgetItems(id);
+  });
+  const [tasks, setTasks] = useState<TimelineTask[]>(() => {
+    const id = StorageService.getActiveEventId();
+    return StorageService.getTasks(id);
+  });
+  const [vendors, setVendors] = useState<Vendor[]>(() => {
+    const id = StorageService.getActiveEventId();
+    return StorageService.getVendors(id);
+  });
+  const [guests, setGuests] = useState<Guest[]>(() => {
+    const id = StorageService.getActiveEventId();
+    return StorageService.getGuests(id);
+  });
+  const [dayOfSchedule, setDayOfSchedule] = useState<DayOfScheduleItem[]>(() => {
+    const id = StorageService.getActiveEventId();
+    return StorageService.getDayOfSchedule(id);
+  });
+  const [inspirations, setInspirations] = useState<InspirationItem[]>(() => {
+    return StorageService.getInspirations();
+  });
+  const [favoriteIds, setFavoriteIds] = useState<string[]>(() => {
+    return StorageService.getFavoriteIds();
+  });
 
   // Wizard & Export Modal State
   const [isWizardOpen, setIsWizardOpen] = useState(false);

@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { formatCurrency, formatDate, getDaysRemaining } from '../src/lib/formatters';
+import { describe, it, expect, vi } from 'vitest';
+import { formatCurrency, formatDate, getDaysRemaining, exportToCSV, sanitizeCSVCell } from '../src/lib/formatters';
 
 describe('formatCurrency', () => {
   it('formats INR correctly with rupee symbol and Indian numbering', () => {
@@ -63,5 +63,29 @@ describe('getDaysRemaining', () => {
     const past = '2020-01-01';
     const diff = getDaysRemaining(past);
     expect(diff).toBeLessThan(0);
+  });
+});
+
+describe('exportToCSV and sanitizeCSVCell', () => {
+  it('triggers CSV download with sanitized headers and rows', () => {
+    const createObjectURLMock = vi.fn().mockReturnValue('blob:mock-url');
+    const revokeObjectURLMock = vi.fn();
+    window.URL.createObjectURL = createObjectURLMock;
+    window.URL.revokeObjectURL = revokeObjectURLMock;
+
+    const appendChildSpy = vi.spyOn(document.body, 'appendChild');
+    const removeChildSpy = vi.spyOn(document.body, 'removeChild');
+
+    import('../src/lib/formatters').then(({ exportToCSV }) => {
+      exportToCSV('test.csv', [
+        ['Name', 'Amount', 'Formula'],
+        ['Priya', 5000, '=cmd| /C calc']
+      ]);
+
+      expect(createObjectURLMock).toHaveBeenCalled();
+      expect(appendChildSpy).toHaveBeenCalled();
+      expect(removeChildSpy).toHaveBeenCalled();
+      expect(revokeObjectURLMock).toHaveBeenCalled();
+    });
   });
 });

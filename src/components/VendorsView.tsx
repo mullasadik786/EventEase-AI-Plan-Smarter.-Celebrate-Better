@@ -385,6 +385,7 @@ export const VendorsView: React.FC<VendorsViewProps> = ({
                       onClick={() => handleOpenEdit(vendor)}
                       className="p-1.5 text-slate-400 hover:text-indigo-600 hover:bg-white rounded-lg transition"
                       title="Edit vendor"
+                      aria-label={`Edit ${vendor.name}`}
                     >
                       <Edit2 className="w-3.5 h-3.5" />
                     </button>
@@ -392,6 +393,7 @@ export const VendorsView: React.FC<VendorsViewProps> = ({
                       onClick={() => onDeleteVendor(vendor.id)}
                       className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-white rounded-lg transition"
                       title="Delete vendor"
+                      aria-label={`Delete ${vendor.name}`}
                     >
                       <Trash2 className="w-3.5 h-3.5" />
                     </button>
@@ -406,17 +408,23 @@ export const VendorsView: React.FC<VendorsViewProps> = ({
       {/* Side-by-Side Vendor Comparison Modal */}
       {isCompareModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-4xl w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150 max-h-[90vh] overflow-y-auto">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="compare-modal-title"
+            className="bg-white rounded-3xl max-w-4xl w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150 max-h-[90vh] overflow-y-auto"
+          >
             <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
               <div>
-                <h3 className="text-lg font-bold text-slate-900 font-heading">
+                <h3 id="compare-modal-title" className="text-lg font-bold text-slate-900 font-heading">
                   Side-by-Side Vendor Comparison
                 </h3>
                 <p className="text-xs text-slate-500">Comparing {compareList.length} shortlisted options</p>
               </div>
               <button
                 onClick={() => setIsCompareModalOpen(false)}
-                className="text-slate-400 hover:text-slate-600"
+                className="text-slate-400 hover:text-slate-600 p-1 rounded-lg transition"
+                aria-label="Close comparison modal"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -466,14 +474,20 @@ export const VendorsView: React.FC<VendorsViewProps> = ({
       {/* Add / Edit Vendor Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="vendor-modal-title"
+            className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150"
+          >
             <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
-              <h3 className="text-base font-bold text-slate-900 font-heading">
+              <h3 id="vendor-modal-title" className="text-base font-bold text-slate-900 font-heading">
                 {editingVendor ? 'Edit Vendor Record' : 'Add Partner Vendor'}
               </h3>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-slate-400 hover:text-slate-600"
+                className="text-slate-400 hover:text-slate-600 p-1 rounded-lg transition"
+                aria-label="Close vendor modal"
               >
                 <X className="w-5 h-5" />
               </button>

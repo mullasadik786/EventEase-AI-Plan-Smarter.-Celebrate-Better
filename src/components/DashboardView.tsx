@@ -337,6 +337,34 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               </button>
             </div>
 
+            {/* Visual Task Completion Progress Bar */}
+            <div className="bg-slate-50/80 p-4 rounded-2xl border border-slate-200/60 mb-4">
+              <div className="flex items-center justify-between text-xs mb-1.5">
+                <span className="font-bold text-slate-700 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                  Task Completion Rate
+                </span>
+                <span className="font-extrabold text-[#5B5CF0] font-heading text-sm">
+                  {taskProgressPct}%
+                </span>
+              </div>
+              <div className="w-full bg-slate-200 rounded-full h-3 overflow-hidden p-0.5">
+                <div
+                  className="bg-gradient-to-r from-emerald-500 via-[#5B5CF0] to-[#7B61FF] h-2 rounded-full transition-all duration-700 ease-out shadow-xs"
+                  style={{ width: `${taskProgressPct}%` }}
+                  role="progressbar"
+                  aria-valuenow={taskProgressPct}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-label="Event tasks completion progress"
+                />
+              </div>
+              <div className="flex items-center justify-between text-[11px] text-slate-500 mt-2 font-medium">
+                <span>{completedTasks} of {totalTasks} tasks completed</span>
+                <span>{totalTasks - completedTasks} remaining</span>
+              </div>
+            </div>
+
             <div className="space-y-3">
               {tasks.slice(0, 5).map((task) => (
                 <div
